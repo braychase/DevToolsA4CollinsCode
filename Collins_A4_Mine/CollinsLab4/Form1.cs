@@ -29,7 +29,7 @@ namespace CollinsLab4
 
             grTripInfo.Visible = false;
             lblPrice.Text = "";
-            txtPeople.Dear();
+            txtPeople.Clear();
             txtPeople.Focus();
             radCuba.Checked = true;
             radCredit.Checked = true;
@@ -129,7 +129,7 @@ namespace CollinsLab4
                 //Calculate price of trip
                 price = people * MEXICOPERSON - ((people * MEXICOPERSON) * DISCOUNT);
                 //Display the price in label in currency format
-                lblPrice.Text = price.ToString("d6");
+                lblPrice.Text = price.ToString("c");
                 grBook.Enabled = false;
                 //Display trip information in now-visible label
                 grTripInfo.Visible = true;
@@ -186,7 +186,7 @@ namespace CollinsLab4
                 //Calculate price of trip
                 price = people * PRICEPERSON;
                 lblPrice.Text = price.ToString("c");
-                grBook.Enabled = falsee;
+                grBook.Enabled = false;
                 grTripInfo.Visible = true;
                 lblDisplay.Text = "Booked by " + agent + "\n\nPeople: " + people.ToString("d2") +
                     "\nLocation: FLORIDA" + "\nPrice: " +
